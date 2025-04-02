@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --light-color: #f8fafc;
+            --dark-color: #1e293b;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('bank.jpg') no-repeat center center fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .registration-container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+        }
+
+        .registration-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .registration-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .registration-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .registration-form {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        .input-field {
+            position: relative;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background-color: white;
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .terms-container {
+            display: flex;
+            align-items: flex-start;
+            margin: 25px 0;
+        }
+
+        .terms-container input {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        .terms-container label {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        .terms-container a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .registration-header {
+                padding: 20px;
+            }
+            
+            .registration-header h1 {
+                font-size: 24px;
+            }
+            
+            .registration-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="registration-header">
+            <h1><i class="fas fa-university"></i> Pipeline Bank</h1>
+            <p>Create your online banking account</p>
+        </div>
+
+        <form class="registration-form" action="#" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <div class="input-field">
+                        <input type="text" id="firstName" name="firstName" required>
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <div class="input-field">
+                        <input type="text" id="lastName" name="lastName" required>
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-field">
+                    <input type="email" id="email" name="email" required>
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-field">
+                    <input type="tel" id="phone" name="phone" required>
+                    <i class="fas fa-phone input-icon"></i>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="accountType">Account Type</label>
+                    <select id="accountType" name="accountType" required>
+                        <option value="">Select account type</option>
+                        <option value="savings">Savings Account</option>
+                        <option value="checking">Checking Account</option>
+                        <option value="business">Business Account</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-field">
+                        <input type="password" id="password" name="password" required>
+                        <i class="fas fa-key input-icon"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-field">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <i class="fas fa-key input-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terms-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a> of Pipeline Bank</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Account</button>
+
+            <div class="login-link">
+                Already have an account? <a href="login.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+ 
+    <script>
+        // Form validation would go here in a real implementation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate passwords match
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // In a real app, you would submit to server here
+            alert('Registration form validated successfully!');
+            // this.submit();
+        });
+    </script>
+</body>
+</html>
