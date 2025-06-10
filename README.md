@@ -1,6 +1,10 @@
 # 🏦 Pipeline Bank - Modern Online Banking System
 
 ![Banking System Preview](landing-page.png)
+![Banking System Preview](signup.png)
+![Banking System Preview](dashboard.png)
+
+
 
 A modern, responsive online banking system with a sleek user interface for account management, transactions, and user authentication.
 
@@ -40,11 +44,11 @@ You only need a modern web browser to view these files.
 ## 📂 Project Structure
 ```
 └───Banking-system-master
-    │--bank.jpg
-    │--dashboard.html
-    │--form.html
-    │--interface.html
-    │--README.md
+    │----bank.jpg
+    │----dashboard.html
+    │----form.html
+    │----interface.html
+    │----README.md
     │
     └───bank
             bank.jpg
@@ -58,6 +62,7 @@ You only need a modern web browser to view these files.
 - **Styling**: Custom CSS with CSS Variables
 - **Icons**: Font Awesome 6
 - **Responsive Design**: Media Queries
-- **Animations**: CSS Keyframes 
+- **Animations**: CSS Keyframes
+  
 ## 📜 License
 Distributed under the MIT License. See LICENSE for more information.
